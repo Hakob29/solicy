@@ -11,6 +11,6 @@ export class Product {
     id: number
 
     @OneToOne(() => User, (user) => user.address)
-    address1: string
+    address1: User
 
 }
