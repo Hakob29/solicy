@@ -1,4 +1,3 @@
-import { ApiProperty } from "@nestjs/swagger";
 import { Column, Entity, PrimaryColumn } from "typeorm";
 
 
@@ -6,7 +5,7 @@ import { Column, Entity, PrimaryColumn } from "typeorm";
 @Entity('User')
 export class User {
 
-    @PrimaryColumn({ type: String })
+    @PrimaryColumn({ type: String, nullable: false })
     address: string
 
     @Column('decimal', { precision: 6, scale: 2 })
